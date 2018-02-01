@@ -19,7 +19,7 @@ namespace BEPUphysics.NarrowPhaseSystems.Pairs
         ContactManifoldConstraintGroup manifoldConstraintGroup;
 
         Dictionary<CollidablePair, CollidablePairHandler> subPairs = new Dictionary<CollidablePair, CollidablePairHandler>();
-        HashSet<CollidablePair> containedPairs = new HashSet<CollidablePair>();
+        BEPUutilities.DataStructures.HashSet<CollidablePair> containedPairs = new BEPUutilities.DataStructures.HashSet<CollidablePair>();
         RawList<CollidablePair> pairsToRemove = new RawList<CollidablePair>();
 
 

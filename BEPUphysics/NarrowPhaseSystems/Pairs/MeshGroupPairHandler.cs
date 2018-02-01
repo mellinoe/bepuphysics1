@@ -55,7 +55,7 @@ namespace BEPUphysics.NarrowPhaseSystems.Pairs
         ContactManifoldConstraintGroup manifoldConstraintGroup;
 
         Dictionary<TriangleEntry, MobileMeshPairHandler> subPairs = new Dictionary<TriangleEntry, MobileMeshPairHandler>();
-        HashSet<TriangleEntry> containedPairs = new HashSet<TriangleEntry>();
+        BEPUutilities.DataStructures.HashSet<TriangleEntry> containedPairs = new BEPUutilities.DataStructures.HashSet<TriangleEntry>();
         RawList<TriangleEntry> pairsToRemove = new RawList<TriangleEntry>();
 
 

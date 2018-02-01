@@ -17,7 +17,7 @@ namespace BEPUutilities.ResourceManagement
         public static void ResetPools()
         {
             SubPoolIntList = new LockingResourcePool<RawList<int>>();
-            SubPoolIntSet = new LockingResourcePool<HashSet<int>>();
+            SubPoolIntSet = new LockingResourcePool<BEPUutilities.DataStructures.HashSet<int>>();
             SubPoolFloatList = new LockingResourcePool<RawList<float>>();
             SubPoolVectorList = new LockingResourcePool<RawList<Vector3>>();
             SubPoolRayHitList = new LockingResourcePool<RawList<RayHit>>();
@@ -26,7 +26,7 @@ namespace BEPUutilities.ResourceManagement
 
         static LockingResourcePool<RawList<RayHit>> SubPoolRayHitList;
         static LockingResourcePool<RawList<int>> SubPoolIntList;
-        static LockingResourcePool<HashSet<int>> SubPoolIntSet;
+        static LockingResourcePool<BEPUutilities.DataStructures.HashSet<int>> SubPoolIntSet;
         static LockingResourcePool<RawList<float>> SubPoolFloatList;
         static LockingResourcePool<RawList<Vector3>> SubPoolVectorList;
 
@@ -74,7 +74,7 @@ namespace BEPUutilities.ResourceManagement
         /// Retrieves a int hash set from the resource pool.
         /// </summary>
         /// <returns>Empty int set.</returns>
-        public static HashSet<int> GetIntSet()
+        public static BEPUutilities.DataStructures.HashSet<int> GetIntSet()
         {
             return SubPoolIntSet.Take();
         }
@@ -83,7 +83,7 @@ namespace BEPUutilities.ResourceManagement
         /// Returns a resource to the pool.
         /// </summary>
         /// <param name="set">Set to return.</param>
-        public static void GiveBack(HashSet<int> set)
+        public static void GiveBack(BEPUutilities.DataStructures.HashSet<int> set)
         {
             set.Clear();
             SubPoolIntSet.GiveBack(set);

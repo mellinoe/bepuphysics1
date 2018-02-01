@@ -11,7 +11,7 @@ namespace BEPUphysics.NarrowPhaseSystems.Pairs
     public abstract class DetectorVolumeGroupPairHandler : DetectorVolumePairHandler, IDetectorVolumePairHandlerParent
     {
         Dictionary<EntityCollidable, DetectorVolumePairHandler> subPairs = new Dictionary<EntityCollidable, DetectorVolumePairHandler>();
-        HashSet<EntityCollidable> containedPairs = new HashSet<EntityCollidable>();
+        BEPUutilities.DataStructures.HashSet<EntityCollidable> containedPairs = new BEPUutilities.DataStructures.HashSet<EntityCollidable>();
         RawList<EntityCollidable> pairsToRemove = new RawList<EntityCollidable>();
 
         /// <summary>
